@@ -1,0 +1,138 @@
+:root{
+    --color--background:rgb(29, 58, 125);
+    --color--box:rgb(70, 153, 159);
+    --color--hover-back:rgb(61, 61, 224);
+    --color--hover-text:rgb(124, 165, 194);
+    --color-background-modal:rgba(25, 23, 23, 0.293);
+    --color-text:white;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:var(--color--background);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.round{
+    background-color:var(--color--background);
+    width: 450px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 20px;
+}
+
+body span{
+    color: white;
+    font-size: 40px;
+    margin:20px 0px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.center_text{
+    background-color:var(--color--box);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 20px;
+    font-size: 30px;
+    color:white;
+}
+
+.center_text:hover{
+    cursor:pointer;
+    background-color:var(--color--hover-back);
+    color:var(--color--hover-text);
+}
+
+/* Modal */
+.modal{
+    display:none;
+    position: fixed;
+    width:100%;
+    height:100%;
+    background-color:var(--color-background-modal);
+    z-index: 1;
+    padding-top:100px;
+    left:0;
+    top:0;
+}
+
+.modal-content{
+    background-color:var(--color-text);
+    width:80%;
+    position: relative;
+    /* height:50vh; */
+    margin:auto;
+    padding:0;
+    border:5px solid ;
+    border-radius: 30px;
+    animation-name:animatetop;
+    animation-duration:1.5s;
+}
+
+.modal-header{
+    padding: 2px 16px;
+    background-color:#000000;
+}
+
+.close{
+    color:white;
+    float:right;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.close:hover{
+    color:rgb(195, 43, 190);
+    cursor:pointer;
+    font-family: "Helvetica Neue";
+}
+
+.modal-body{
+    padding:2px 16px;
+}
+
+.modal-body p{
+    text-align: center;
+    font-size:20px;
+}
+
+.modal-footer{
+    height:25px;
+    padding: 2px 16px;
+    background-color:#000000;
+}
+
+@keyframes animatetop {
+    from{
+        top: -300px;
+        opacity: 0;
+    }
+
+    to{
+        top: 0;
+        opacity:1;
+    }
+}
+
+/* Tarea: hacer animación de cuadro de 
+derecha a izquierda y que se agrande */
+
+
